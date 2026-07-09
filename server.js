@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
  const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -106,4 +106,4 @@ app.post('/api/login', async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
->>>>>>> f935380ef35bba2f0d262ae2c80172b75bc309fa
+
