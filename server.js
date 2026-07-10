@@ -52,7 +52,6 @@ app.post('/api/login', async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-=======
  const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -92,7 +91,7 @@ app.post('/api/login', async (req, res) => {
   try {
     const { email, password } = req.body;
     const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
-    if (result.rows.length === 0) return res.status(401).json({ error: 'Invalid credentials' });
+    if (result.rows.length=0) return res.status(401).json({ error: 'Invalid credentials' });
     
     const user = result.rows[0];
     const validPassword = await bcrypt.compare(password, user.password_hash);
